@@ -21,24 +21,26 @@ export default function App() {
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
+
         </form>
         <div className="App">
           <img src="/" alt="weather icon" />
           <h2 className="current-icon-description">partly cloudy</h2>
           <h3 className="city-country text-uppercase">Kyiv, UA</h3>
-          <h1 className="current-temp">24°C</h1>
+          <h1 className="current-temp">24°</h1>
           <div className="row row-cols-3 current-condition">
             <div className="col"><i class="fa-solid fa-droplet"></i> humidity<br />50%</div>
             <div className="col"><i class="fa-solid fa-wind"></i> wind <br />3 m/s</div>
-            <div className="col"><i class="fa-solid fa-temperature-three-quarters"></i> real feel <br />20° </div>
+            <div className="col"><i class="fa-solid fa-temperature-arrow-up"></i> max 25°<br /><i class="fa-solid fa-temperature-arrow-down"></i> min 15° </div>
           </div>
         </div>
       </div>
       <footer>
-        <p>coded by <a href="/">Hanna</a> and is <a href="/">open-sourced on GitHub</a> and hosted on Netlify</p>
-        <p> inspired by <a href="https://dribbble.com/shots/2427734-Black-White-Weather">Emil Widlund
+        <p>coded by <a href="https://teal-speculoos-2e6228.netlify.app/" target="_blank" rel="noreferrer">Hanna</a> and is <a href="https://github.com/boxdigi/weather-react-project" target="_blank" rel="noreferrer">open-sourced on GitHub</a></p>
+        <p> inspired by <a href="https://dribbble.com/shots/2427734-Black-White-Weather" target="_blank" rel="noreferrer">Emil Widlund
         </a>
-        </p></footer>
+        </p>
+      </footer>
     </div>
   );
 }

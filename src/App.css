@@ -5,37 +5,44 @@
   padding: 20px;
 }
 
+
 .App {
   padding: 20px;
-
 }
 
 .App img {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 .App .current-icon-description {
   text-transform: uppercase;
-  font-size: 30px;
-
+  font-size: 25px;
   padding: 10px;
+  letter-spacing: 5px;
+  font-weight: 700;
+  font-family: 'Cabin', sans-serif;
 }
 
 .App .city-country {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
   opacity: 0.8;
-
+  letter-spacing: 2px;
+  font-family: 'Cabin', sans-serif;
 }
 
 .App .current-temp {
   font-size: 70px;
   padding: 10px 0 20px;
   font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
 }
 
 .App .current-condition {
   padding-top: 20px;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 0.9;
 }
 
 footer p {
