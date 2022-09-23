@@ -29,6 +29,20 @@
   padding: 10px 0 20px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
+  color: black;
+}
+
+.units a {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  top: -35px;
+  text-decoration: none;
+  color: black;
+}
+
+.units.active {
+  font-weight: 400;
 }
 
 .Weather .current-condition {

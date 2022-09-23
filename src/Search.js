@@ -9,7 +9,6 @@ export default function Search() {
             className="form-control"
             type="search"
             placeholder="Enter a city..."
-            aria-label="Search with one button"
             autoFocus="off"
             autoComplete="off"
           />
