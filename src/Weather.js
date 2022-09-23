@@ -14,7 +14,6 @@ export default function Weather() {
             <span className="units active"><a href="/">°C </a></span>
             <span className="units"><a href="/">°F</a></span>
           </div>
-
           <div className="row row-cols-2 current-condition">
             <div className="col"><i class="fa-solid fa-droplet"></i> humidity 50%</div>
             <div className="col"><i class="fa-solid fa-temperature-arrow-up"></i> max 25°</div>
