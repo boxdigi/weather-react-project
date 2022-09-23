@@ -9,7 +9,6 @@ export default function Weather() {
   function handleResponse(response) {
     setReady(true);
     console.log(response);
-    console.log(response.data.main);
     setWeatherData({
       city: response.data.name,
       country: response.data.sys.country,
@@ -18,7 +17,8 @@ export default function Weather() {
       humidity: response.data.main.humidity,
       realFeel: Math.round(response.data.main.feels_like),
       pressure: response.data.main.pressure,
-      description: response.data.weather[0].description
+      description: response.data.weather[0].description,
+      iconUrl: "https://i.pinimg.com/originals/f9/8e/1b/f98e1bc90e8f78e9c6893ca4ab2f99d9.png",
     });
   }
   if (ready) {
@@ -27,7 +27,7 @@ export default function Weather() {
         <div className="border border-1 rounded-4">
           <Search />
           <div className="Current">
-            <img src="https://i.pinimg.com/originals/f9/8e/1b/f98e1bc90e8f78e9c6893ca4ab2f99d9.png" alt="weather icon" />
+            <img src={weatherData.iconUrl} alt={weatherData.description} />
             <h2 className="current-icon-description">{weatherData.description}</h2>
             <h3 className="city-country text-uppercase">{weatherData.city}, {weatherData.country}</h3>
             <div className="current-temp">{weatherData.currTemp}
