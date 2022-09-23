@@ -1,0 +1,12 @@
+.container {
+  max-width: 500px;
+  color: rgba(0, 0, 0, 0.95);
+  text-align: center;
+  padding: 20px;
+}
+
+.container footer p {
+  padding-top: 5px;
+  margin: 2px;
+  font-size: 13px;
+}

@@ -1,21 +1,13 @@
-.container {
-  max-width: 500px;
-  color: rgba(0, 0, 0, 0.95);
-  text-align: center;
+.Current {
   padding: 20px;
 }
 
-
-.App {
-  padding: 20px;
-}
-
-.App img {
+.Weather img {
   padding-top: 50px;
   max-width: 70px;
 }
 
-.App .current-icon-description {
+.Weather .current-icon-description {
   text-transform: uppercase;
   font-size: 23px;
   padding: 10px;
@@ -24,30 +16,24 @@
   font-family: 'Cabin', sans-serif;
 }
 
-.App .city-country {
+.Weather .city-country {
   font-size: 17px;
   font-weight: 700;
-  opacity: 0.65;
+  color: #878787;
   letter-spacing: 4px;
   font-family: 'Montserrat', sans-serif;
 }
 
-.App .current-temp {
+.Weather .current-temp {
   font-size: 70px;
   padding: 10px 0 20px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
 }
 
-.App .current-condition {
+.Weather .current-condition {
   padding-top: 20px;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
   opacity: 0.9;
-}
-
-footer p {
-  padding-top: 5px;
-  margin: 2px;
-  font-size: 13px;
 }
