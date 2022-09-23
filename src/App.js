@@ -27,18 +27,18 @@ export default function App() {
           <h2 className="current-icon-description">partly cloudy</h2>
           <h3 className="city-country text-uppercase">Kyiv, UA</h3>
           <h1 className="current-temp">24°C</h1>
-          <div className="row current-condition">
-            <div className="col-4">humidity 50%</div>
-            <div className="col-4">wind 3 m/s</div>
-            <div className="col-4">real feel 20° </div>
+          <div className="row row-cols-3 current-condition">
+            <div className="col"><i class="fa-solid fa-droplet"></i> humidity<br />50%</div>
+            <div className="col"><i class="fa-solid fa-wind"></i> wind <br />3 m/s</div>
+            <div className="col"><i class="fa-solid fa-temperature-three-quarters"></i> real feel <br />20° </div>
           </div>
         </div>
       </div>
-      <p className="pt-4">coded by <a href="/">Hanna</a> and is <a href="/">open-sourced</a> on GitHub</p>
-      <p> inspired by
-        <a href="https://dribbble.com/shots/2427734-Black-White-Weather"> Emil Widlund
+      <footer>
+        <p>coded by <a href="/">Hanna</a> and is <a href="/">open-sourced on GitHub</a> and hosted on Netlify</p>
+        <p> inspired by <a href="https://dribbble.com/shots/2427734-Black-White-Weather">Emil Widlund
         </a>
-      </p>
+        </p></footer>
     </div>
   );
 }
