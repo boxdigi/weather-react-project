@@ -1,6 +1,6 @@
 .container {
   max-width: 500px;
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.95);
   text-align: center;
   padding: 20px;
 }
@@ -11,12 +11,13 @@
 }
 
 .App img {
-  padding-top: 80px;
+  padding-top: 50px;
+  max-width: 70px;
 }
 
 .App .current-icon-description {
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 23px;
   padding: 10px;
   letter-spacing: 5px;
   font-weight: 700;
@@ -24,11 +25,11 @@
 }
 
 .App .city-country {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 700;
-  opacity: 0.8;
-  letter-spacing: 2px;
-  font-family: 'Cabin', sans-serif;
+  opacity: 0.65;
+  letter-spacing: 4px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .App .current-temp {
