@@ -1,3 +1,29 @@
 .App {
   text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.App .city-country {
+  font-size: medium;
+
+  font-stretch: ultra-expanded;
+  opacity: 0.7;
+}
+
+.App img {
+  padding-top: 100px;
+}
+
+.App .current-icon-description {
+  text-transform: uppercase;
+  font-stretch: ultra-expanded;
+}
+
+.App .current-condition {
+  padding-top: 20px;
+}
+
+.App .current-temp {
+  font-size: 70px;
+  padding: 20px;
 }
