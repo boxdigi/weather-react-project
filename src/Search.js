@@ -15,7 +15,7 @@ export default function Search() {
           <button
             type="button"
             className="search btn border btn-light text-muted">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i className="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
       </form>
