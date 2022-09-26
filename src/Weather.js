@@ -38,15 +38,16 @@ export default function Weather() {
               <span className="units"><a href="/">°F</a></span>
             </div>
             <div className="row row-cols-2 current-condition">
-              <div className="col">
+              <div className="col-sm">
                 <i className="fa-solid fa-droplet"></i>
                 humidity {weatherData.humidity}%</div>
-              <div className="col">
+              <div className="col-sm">
                 <i className="fa-solid fa-wind"></i> wind {weatherData.wind} m/s</div>
-              <div className="col">
-                <i className="fa-solid fa-hand"></i> feels like {weatherData.realFeel}°</div>
-              <div className="col">
+              <div className="col-sm pt-2">
                 <i className="fa-solid fa-cloud-arrow-up"></i> pressure {weatherData.pressure} hPa</div>
+
+              <div className="col-sm pt-2">
+                <i className="fa-solid fa-hand"></i> feels like {weatherData.realFeel}°</div>
             </div>
           </div>
         </div>

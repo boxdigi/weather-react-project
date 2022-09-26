@@ -1,11 +1,13 @@
-.container {
-  max-width: 500px;
+.App-container {
+  max-width: 400px;
   color: rgba(0, 0, 0, 0.95);
   text-align: center;
   padding: 20px;
+  display: block;
+  margin: 0 auto;
 }
 
-.container footer p {
+.App-container footer p {
   padding-top: 5px;
   margin: 2px;
   font-size: 13px;
