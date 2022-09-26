@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Search from "./Search";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 
 export default function Weather() {
@@ -10,6 +11,7 @@ export default function Weather() {
     setReady(true);
     console.log(response);
     setWeatherData({
+      date: new Date(response.data.dt * 1000),
       city: response.data.name,
       country: response.data.sys.country,
       currTemp: Math.round(response.data.main.temp),
@@ -26,6 +28,7 @@ export default function Weather() {
       <div className="Weather">
         <div className="border border-1 rounded-4">
           <Search />
+          <div className="current-date"><FormattedDate date={weatherData.date} /></div>
           <div className="Current">
             <img src={weatherData.iconUrl} alt={weatherData.description} />
             <h2 className="current-icon-description">{weatherData.description}</h2>
