@@ -8,14 +8,13 @@ import {
   WiCloudy,
   WiRain,
   WiDayShowers,
-  WiNightShowers,
+  WiNightAltShowers,
   WiThunderstorm,
   WiSnowflakeCold,
   WiFog,
 } from "weather-icons-react";
 
 export default function WeatherIcon(props) {
-  console.log(props.code);
   const codeMapping = {
     "01d": <WiDaySunny size={props.size} color={props.color} />,
     "01n": <WiNightClear size={props.size} color={props.color} />,
@@ -28,7 +27,7 @@ export default function WeatherIcon(props) {
     "09d": <WiRain size={props.size} color={props.color} />,
     "09n": <WiRain size={props.size} color={props.color} />,
     "10d": <WiDayShowers size={props.size} color={props.color} />,
-    "10n": <WiNightShowers size={props.size} color={props.color} />,
+    "10n": <WiNightAltShowers size={props.size} color={props.color} />,
     "11d": <WiThunderstorm size={props.size} color={props.color} />,
     "11n": <WiThunderstorm size={props.size} color={props.color} />,
     "13d": <WiSnowflakeCold size={props.size} color={props.color} />,
