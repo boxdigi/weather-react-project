@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherUnits from "./WeatherUnits";
 
 export default function SearchWeather(props) {
   return (
@@ -10,10 +11,7 @@ export default function SearchWeather(props) {
         <div className="weatherIcon"><WeatherIcon code={props.info.icon} size={64} color="#000" /></div>
         <h2 className="current-icon-description">{props.info.description}</h2>
         <h3 className="city-country text-uppercase">{props.info.city}, {props.info.country}</h3>
-        <div className="current-temp">{props.info.currTemp}
-          <span className="units active"><a href="/">°C </a></span>
-          <span className="units"><a href="/">°F</a></span>
-        </div>
+        <WeatherUnits celsius={props.info.currTemp} />
         <div className="row row-cols-2 current-condition">
           <div className="col">
             <i className="fa-solid fa-droplet"></i>

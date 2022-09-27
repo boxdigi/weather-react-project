@@ -45,18 +45,20 @@
   margin: 0;
 }
 
-.current-temp .units a {
-  font-size: 20px;
+.units {
+  font-size: 18px;
   font-family: 'Montserrat', sans-serif;
   position: relative;
   top: -35px;
   text-decoration: none;
-  color: #878787;
+  color: black;
+  font-weight: 700;
 }
 
-.units.active a {
+.units a {
   font-weight: 500;
-  color: black;
+  color: #878787;
+  text-decoration: none;
 }
 
 .real-feel {
