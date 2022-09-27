@@ -16,14 +16,14 @@ export default function SearchWeather(props) {
           <span className="units"><a href="/">°F</a></span>
         </div>
         <div className="row row-cols-2 current-condition">
-          <div className="col-sm">
+          <div className="col">
             <i className="fa-solid fa-droplet"></i>
             humidity {props.info.humidity}%</div>
-          <div className="col-sm">
+          <div className="col">
             <i className="fa-solid fa-wind"></i> wind {props.info.wind} m/s</div>
-          <div className="col-sm pt-2">
+          <div className="col pt-2">
             <i className="fa-solid fa-cloud-arrow-up"></i> pressure {props.info.pressure} hPa</div>
-          <div className="col-sm pt-2">
+          <div className="col pt-2">
             <i className="fa-solid fa-hand"></i> feels like {props.info.realFeel}°</div>
         </div>
       </div>
