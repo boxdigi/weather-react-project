@@ -8,7 +8,7 @@ export default function SearchWeather(props) {
     <div className="Search">
       <div className="current-date"><FormattedDate date={props.info.date} /></div>
       <div className="Current">
-        <WeatherIcon code={props.info.icon} size={32} color="#000" />
+        <div className="weatherIcon"><WeatherIcon code={props.info.icon} size={64} color="#000" /></div>
         <h2 className="current-icon-description">{props.info.description}</h2>
         <h3 className="city-country text-uppercase">{props.info.city}, {props.info.country}</h3>
         <div className="current-temp">{props.info.currTemp}
