@@ -40,7 +40,7 @@ export default function Weather(props) {
       realFeel: Math.round(response.data.main.feels_like),
       pressure: response.data.main.pressure,
       description: response.data.weather[0].description,
-      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
     });
   }
   if (ready) {
