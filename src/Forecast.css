@@ -1,0 +1,25 @@
+.WeatherForecast {
+  padding-top: 35px;
+  color: #454348;
+}
+
+.forecast-day {
+  font-size: 13px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  font-family: 'Cabin', sans-serif;
+  padding: 8px;
+}
+
+.forecast-temperature {
+  font-size: 16px;
+  padding: 8px;
+}
+
+.forecast-temp-max {
+  font-weight: bold;
+}
+
+.forecast-temp-min {
+  color: #878787;
+}
