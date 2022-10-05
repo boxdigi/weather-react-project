@@ -13,9 +13,10 @@ export default function Weather(props) {
     if (city.length === 0) {
       alert("Please enter a city");
     } else {
-      const apiKey = "481bc9bf97ae403a7ee70a4848c33bb8";
+      const apiKey = "50fa4024e3b1d5eac2f51ab18a47e997";
       let unit = `metric`;
       let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
+      console.count(apiUrl);
       axios.get(apiUrl).then(handleResponse);
     }
   }
@@ -29,7 +30,7 @@ export default function Weather(props) {
   }
 
   function handleResponse(response) {
-    console.log(response.data.coord);
+    console.count();
     setReady(true);
     setWeatherData({
       coordinates: response.data.coord,

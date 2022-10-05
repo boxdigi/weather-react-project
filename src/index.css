@@ -11,11 +11,21 @@
   padding-top: 5px;
   margin: 2px;
   font-size: 13px;
+  color: #878787;
+}
+
+.App-container footer a {
+  opacity: 0.6;
+  text-decoration: none;
 }
 
 @media(max-width:400px) {
   .Weather .current-condition {
     font-size: 10px;
     opacity: 100%;
+  }
+
+  .App-container footer p {
+    margin: 0;
   }
 }

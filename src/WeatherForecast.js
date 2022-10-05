@@ -1,32 +1,45 @@
-import React from "react";
-import WeatherIcon from "./WeatherIcon";
+import React, { useState } from "react";
 import "./Forecast.css"
 import axios from "axios";
+import ForecastDaily from "./ForecastDaily";
 
 export default function WeatherForecast(props) {
-  let latitude = props.coordinates.lat;
-  let longitude = props.coordinates.lon;
-  const apiKey = "481bc9bf97ae403a7ee70a4848c33bb8";
-  let unit = `metric`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=current,hourly&appid=${apiKey}&units=${unit}`;
-  console.log(apiUrl);
-  axios.get(apiUrl).then(handleResponse);
+  const [ready, setReady] = useState(false);
+  let [forecast, setForecast] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data)
+    console.count();
+    setForecast(response.data.daily);
+    setReady(true);
   }
-
-  return (
-    <div className="WeatherForecast">
-      <div className="row">
-        <div className="col">
-          <div className="forecast-day">WED</div>
-          <WeatherIcon code="02d" size={40} color="#454348" />
-          <div className="forecast-temperature">
-            <span className="forecast-temp-max">25°</span>   <span className="forecast-temp-min">15°</span>
-          </div>
+  if (ready) {
+    console.count(ready);
+    return (
+      <div className="WeatherForecast">
+        <div className="row">
+          {forecast.map(function (dailyForecast, index) {
+            if (index > 0 & index < 6) {
+              return (
+                <div className="col" key={index}>
+                  <ForecastDaily data={dailyForecast} />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          }
+          )}
         </div>
       </div>
-    </div>
-  )
+    )
+  } else {
+    let latitude = props.coordinates.lat;
+    let longitude = props.coordinates.lon;
+    const apiKey = "50fa4024e3b1d5eac2f51ab18a47e997";
+    let unit = `metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${unit}`;
+    console.count(apiUrl);
+    //axios.get(apiUrl).then(handleResponse);
+    return ("Loading...")
+  }
 }

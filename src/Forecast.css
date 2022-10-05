@@ -1,18 +1,24 @@
 .WeatherForecast {
-  padding-top: 35px;
+  padding: 20px 18px 15px;
   color: #454348;
+
+}
+
+
+.WeatherForecast .col {
+  padding: 0 2px;
 }
 
 .forecast-day {
   font-size: 13px;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   font-weight: 700;
   font-family: 'Cabin', sans-serif;
   padding: 8px;
 }
 
 .forecast-temperature {
-  font-size: 16px;
+  font-size: 14px;
   padding: 8px;
 }
 
@@ -22,4 +28,19 @@
 
 .forecast-temp-min {
   opacity: 0.8;
+}
+
+@media(max-width:400px) {
+
+  .forecast-temperature,
+  .forecast-day {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  .ForecastDaily svg {
+    max-height: 25px;
+    max-width: 25px;
+  }
+
 }
