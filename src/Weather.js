@@ -13,10 +13,9 @@ export default function Weather(props) {
     if (city.length === 0) {
       alert("Please enter a city");
     } else {
-      const apiKey = "b0de966a5f210c2492572cc7759b218c";
+      const apiKey = "481bc9bf97ae403a7ee70a4848c33bb8";
       let unit = `metric`;
       let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
-      console.log(apiUrl)
       axios.get(apiUrl).then(handleResponse);
     }
   }
@@ -30,8 +29,10 @@ export default function Weather(props) {
   }
 
   function handleResponse(response) {
+    console.log(response.data.coord);
     setReady(true);
     setWeatherData({
+      coordinates: response.data.coord,
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
       country: response.data.sys.country,
@@ -66,7 +67,7 @@ export default function Weather(props) {
             </div>
           </form>
           <SearchWeather info={weatherData} />
-          <WeatherForecast />
+          <WeatherForecast coordinates={weatherData.coordinates} />
         </div>
       </div>
     )
