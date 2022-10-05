@@ -11,7 +11,7 @@ export default function App() {
         <div className="d-flex justify-content-evenly">
           <p>inspired by <a href="https://dribbble.com/shots/2427734-Black-White-Weather" target="_blank" rel="noreferrer">Emil Widlund
           </a></p>
-          <p>used <a href="https://openweathermap.org/">OpenWeatherMap</a></p></div>
+          <p>used <a href="https://openweathermap.org/" target="_blank" rel="noreferrer">OpenWeatherMap</a></p></div>
       </footer>
     </div>
   );
