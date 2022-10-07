@@ -22,7 +22,6 @@ export default function WeatherForecast(props) {
   }
 
   function handleResponse(response) {
-    console.count();
     setForecast(response.data.daily);
     setReady(true);
   }

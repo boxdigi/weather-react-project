@@ -5,19 +5,20 @@ import axios from "axios";
 
 
 export default function Weather(props) {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
   let [city, setCity] = useState(props.defaultCity);
 
+
   function search() {
+    const apiKey = "48c28c42760752f982c4dbf96a665b63";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    console.count(apiUrl);
     if (city.length === 0) {
       alert("Please enter a city");
     } else {
-      const apiKey = "48c28c42760752f982c4dbf96a665b63";
-      let unit = `metric`;
-      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
-      console.count(apiUrl);
-      axios.get(apiUrl).then(handleResponse);
+      axios.get(apiUrl).then(handleResponse, function () {
+        alert('Requested city is not found. Please try again 😉 or ask Google');
+      });
     }
   }
 
@@ -25,13 +26,14 @@ export default function Weather(props) {
     event.preventDefault();
     search();
   }
+
   function handleCity(event) {
     setCity(event.target.value);
   }
 
   function handleResponse(response) {
-    setReady(true);
     setWeatherData({
+      ready: true,
       coordinates: response.data.coord,
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
@@ -45,7 +47,7 @@ export default function Weather(props) {
       icon: response.data.weather[0].icon,
     });
   }
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         <div className="border border-1 rounded-4">
